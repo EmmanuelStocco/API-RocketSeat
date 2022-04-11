@@ -1,12 +1,11 @@
-
-interface Course{
+interface Course {
     name: string;
-    durantion: number;
-    educator: string;
+    durantion?: number;
+    educator: string; 
 }
 
 class CreateCourseService {
-    execute({ durantion, educator, name}: Course){
+    execute({ durantion = 8, educator, name }: Course) {
         console.log(name, durantion, educator);
     }
 }
